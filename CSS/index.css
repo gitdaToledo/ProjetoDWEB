@@ -1,0 +1,184 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Silkscreen:wght@400;700&display=swap');
+
+ /*mobile first*/
+
+@media screen { /*estilos gerais e para celular*/
+body{
+        background-color: #12022b;
+        background-image: url(../Imagens-dinamicas/backgroundIndex-celular.png);
+        background-size: 100vw 100vh;
+        padding-top: 30vh;
+        user-select: none;
+    }
+
+    h1{
+        text-align: center;
+        font-family: "Jersey 20", sans-serif;
+        color: white;
+        font-size: 6.5em;
+        text-shadow: 3px 4px 1px #ff0068;
+        margin: 0;
+    }
+
+     .titulo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 80px;
+    }
+
+    h2#abrirMenu{
+        color: white;
+        text-align: center;
+        font-family: "Jersey 20", sans-serif;
+        width: 30vw;
+        padding: 3px;
+        margin-top: 1.5vh;
+        margin: auto;
+    }
+
+    #start{
+        display: block;
+        width: fit-content;
+        margin: auto;
+    }
+
+      #botaoStart{
+        display: block;
+        margin: auto;
+        margin-top: 1.5vh;
+        width:40vw;
+    }
+
+   /*animação carregamento*/ 
+
+   #loading {
+    position: fixed;
+    inset: 0;
+    background-color:#12022b;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+    div#loading > h2{
+        color: white;
+        font-family: "Silkscreen", sans-serif;
+    }
+
+    #barra {
+    width: 300px;
+    height: 20px;
+    border: 2px solid #ff0068;
+    border-radius: 10px;
+    }
+
+    #progresso {
+    height: 100%;
+    width: 0%;
+    background-color: #ff0068;
+    border-radius: 10px;
+    transition: 0.2s;
+    }
+}
+
+@media screen and (max-width: 958px) and (orientation: landscape) /*celular no modo paisagem*/
+{
+     body{
+        background-image: url(../Imagens-dinamicas/backgroundIndex.jpg);
+        padding-top: 15vh;
+        font-size: 1em;
+    }
+
+      h1{
+        font-size: 6em;
+    }
+
+     .titulo{
+        line-height: 75px;
+    }
+
+    #abrirMenu{
+        margin: 0;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+     #botaoStart{
+        display: flex;
+        margin-top: 3vh;
+        width: 14vw;
+    }
+
+}
+
+@media (min-width: 760px) and (max-width: 958px){/*tablets*/
+    body{
+        padding-top: 35vh;
+        background-image: url(../Imagens-dinamicas/backgroundIndex-celular.png);
+        background-size: 100vw 100vh;
+    }
+
+     h1{
+        font-size: 8em;
+    }
+
+     .titulo{
+        line-height: 94px;
+    }
+
+    h2#abrirMenu
+    {
+        font-size: 2.5rem;
+    }
+
+     #botaoStart{
+        min-width: 220px;
+       width: 14vw;
+    }
+}
+
+@media screen and (min-width: 959px)  /*telas grandes*/
+{
+    body{
+        padding-top: 20vh;
+        font-size: 1em;
+        background-image: url(../Imagens-dinamicas/backgroundIndex.jpg);
+        background-size: 100vw 100vh;
+    }
+
+     h1{
+        font-size: 10em;
+    }
+
+    #abrirMenu:hover::before,
+    #abrirMenu:hover::after, a:hover::before {
+        opacity: 1;
+    }
+
+     .titulo{
+        line-height: 120px;
+    }
+
+      #abrirMenu{
+        width: 30vw;
+        padding: 4px;
+        margin-top: 2vh;
+        cursor: pointer;
+        margin: 0;
+        font-size: 2.0rem;
+        text-align: center;
+    }
+
+     #botaoStart{
+        display: flex;
+        margin-top: 3vh;
+        cursor: pointer;
+        max-width: 250px;
+
+}
+
+}
