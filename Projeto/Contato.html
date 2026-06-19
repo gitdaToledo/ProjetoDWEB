@@ -3,21 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/menu.css">
+    <link rel="stylesheet" href="../CSS/Menu.css">
     <link rel="stylesheet" href="../CSS/Contato.css">
+    <link rel="icon" type="image/x-icon" href="/itensPng/Logo.png">
     <title>Contato</title>
 </head>
 <body>
 
     <!--menu-->
-       <span id="btnMenu" class="material-symbols-outlined">more_vert</span>
-    <div id="overlay"></div>
-    <nav id="menu">
-        <a href="PaginaInicial.html">Página Inicial</a>
-        <a href="#">Sobre</a>
-        <a href="#">Localização</a>
-        <a href="Contato.html">Contato</a>
-       </nav>
-    <script src="../Javascript/script.js"></script> <!--Javascript do menu-->
+     <ul>
+            <li><a href="PaginaInicial.html" >PÁGINA INICIAL</a></li>
+            <li><a href="Sobre.html">SOBRE</a></li>
+            <li><a href="Localizacao.html">LOCALIZAÇÃO</a></li>
+            <li><a href="Contato.html" id="PagAtual">CONTATO</a></li>
+            <li><a href="Loja.html">LOJA</a></li>
+        </ul>
+
+    <main>
+        <form action="contato.php" method="post">
+            <h2>Contato</h2>
+        <div class="campo">
+            <span class="material-symbols-outlined">contacts_product</span>
+            <input type="text" name="nome" placeholder="Nome*" required>
+        </div>
+        <div class="campo">
+            <span class="material-symbols-outlined">mail</span>
+            <input type="email" name="email" placeholder="E-mail*" required>
+        </div>
+        <div class="campo">
+            <span class="material-symbols-outlined">call</span>
+            <input type="tel" name="tel" placeholder="Telefone*" required>
+        </div>
+        <h3>AVALIE NOSSO SITE</h3>
+        <div class="campo">
+            <p style="margin-right: 4px;">0</p>
+            <input type="range" min="0" max="10" name="satisfacaoCliente" id="satisfacaoCliente">
+            <p style="margin-left: 4px;">10</p>
+        </div>
+        <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Mensagem"></textarea>
+        <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+     
+     <footer>
+     <p>Site desenvolvido por :<em> Isabelle Avellino</em> e <em>Maria Paula Toledo</em></p> 
+     <p>© Projeto Web 2026</p>
+    </footer>
+
 </body>
 </html>

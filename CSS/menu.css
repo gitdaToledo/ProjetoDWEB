@@ -1,106 +1,178 @@
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
 
-@import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Silkscreen:wght@400;700&display=swap');
 
-/*animação setas menu*/
+   @import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Silkscreen:wght@400;700&display=swap');
 
-    #abrirMenu::after, #abrirMenu::before, a::before{
-        opacity: 0;
-        transition: 0.3s;
-    }
+   @media screen{ /*estilos gerais*/
 
-    #abrirMenu::before{
-    content: "> ";
-    }
+     *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    nav > a::before{
-    content:"‣ ";
-    font-size: 30px;
-    }
 
-    #abrirMenu::after{
-        content: " <";
-    }
+        ul{
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: row;
+        }
 
-    #abrirMenu:active::before,
-    #abrirMenu:active::after, a:active::before {
-        opacity: 1;
-    }
+        ul, li{
+            list-style: none;
+            font-weight: 300;
+        }
 
-    #abrirMenu{
-        margin: 0;
-        font-size: 2rem;
-        text-align: center;
-    }
+        ul, li, a{
+            position:relative;
+            text-decoration: none;
+            color: #ff0068;
+            font-family: "Jersey 20", sans-serif;
+            white-space: nowrap;
+        }
 
-     /*menu no mobile*/
-    
-   #overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.61);
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.4s;
-    z-index: 5;
-    }
+         a#PagAtual{
+            background-color: #ff0068;
+            color: white;
+        }
 
-    #menu{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 280px;
-    height: 100vh;
-    transform: translate(-50%,  50%) scale(0);
-    width: 300px;
-    height: auto;
-    background-color: #000000f1;
-    padding: 15px;
-    border-radius: 6px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    transition: 0.4s;
-    z-index: 10;
-    }
-
-     #menu.ativo {
-     transform: translate(-50%, -50%) scale(1);
-    }
-
-    #overlay.ativo {
-    opacity: 1;
-    visibility: visible;
+        footer{
+         font-size: 12px;
+         color:white;
+         text-align: center;
+         margin-top: auto;
+         font-family: "Jersey 20";
+         margin-bottom: 12px;
+      }
    }
 
-    nav > a{
-        text-align: center;
-        color: white;
-        text-decoration: none;
-        margin-bottom: 8px;
-        font-size: 1.5em;
-        font-family: "Silkscreen", sans-serif;
-    }
 
-    #btnMenu{
-        font-size: 26px;
-        border: 1px solid black;
-        border-radius: 12px;
-        padding: 6px;
-    }
+    /*celulares*/
+   @media screen and (max-width: 640px)
+   {
+         ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+         }
 
-    /*tela grande*/
-@media screen and (min-width: 959px)  /*telas grandes*/
-{
-     a:hover::before {
-        opacity: 1;
-    }
+       ul, li, a{
+            margin: 20px 0;
+            padding: 8px;
+            color: #ff0068;
+        }
 
-    #btnMenu{
-        cursor: pointer;
-    }
+        a{
+            font-size: 12px;
+        }
 
-}
+         footer > p{
+         font-size: 12px;
+         text-align: center;
+      }
+     
+   }
+
+
+   /*tablets*/
+   @media screen and (min-width: 641px) and (max-width: 991px)
+   {
+      ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+         }
+
+       ul, li, a{
+            margin-top: 35px;
+            padding: 10px 12px;
+            color: #ff0068;
+            font-size: 24px;
+        }
+
+         footer > p{
+         text-align: center;
+         font-size: 16px;
+      }
+   }
+
+
+ /*telas grandes*/
+   @media screen and (min-width: 992px) 
+   {
+      ul, li, a{
+            margin: 30px 0;
+            padding: 10px 20px;
+            font-size: 24px;
+            transition: 0.5s;
+            z-index: 1;
+        }
+   
+        ul li a::before{
+            content:"";
+            position: absolute;
+            top:0; 
+            left:0;
+            width: 100%;
+            height: 100%;
+            border-top: 2px solid #ff0068;
+            border-bottom: 2px solid #ff0068;
+            transform: scaleY(2);
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        ul li a::after{
+            content:"";
+            position: absolute;
+            top:2px; 
+            left:0;
+            width: 100%;
+            height: 100%;
+            background-color: #ff0068;
+            transform: scale(0);
+            opacity: 0;
+            transition: 0.3s;
+            z-index: -1;
+        }
+
+        ul li a:hover{
+            color: white;
+        }
+
+        ul li a:hover::before{
+            transform: scaleY(1);
+            opacity: 1;
+        }
+
+        ul li a#PagAtual:hover::before{
+            transform: 0;
+            opacity: 0;
+        }
+
+        ul li a:hover::after{
+            transform: scaleY(1);
+            opacity: 1;
+        }
+
+        ul li a#PagAtual:hover::after{
+            transform:0;
+            opacity: 0;
+        }
+
+         footer > p{
+         text-align: center;
+         font-size: 20px;
+      }
+   }
+
+   @media screen and (min-width: 1400px){
+    a{
+        font-size: 1em;
+    }
+   }
+
+  

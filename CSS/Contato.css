@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Silkscreen:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
+@media screen {
+
+        *{
+            box-sizing:border-box;
+        }
+
+    body{
+        min-height: 100vh;
+        background-image: url('../Gif/Background');
+        background-position: center;
+        background-repeat: repeat;
+        background-color: #0c001c;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+
+    main{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;        
+        padding: 10px;
+        background-color: #33004bc7;
+        border-radius: 8px;
+       
+    }
+
+    h2, h3{
+        text-align: center;
+        color: white;
+        font-family: "Silkscreen";
+    }
+
+    .campo{
+        display: flex;
+        align-items: center;
+        color:white;
+        margin-bottom: 12px;
+    }
+
+    span{
+        color: white;
+        margin-right: 4px;
+    }
+
+    input, textarea{
+        margin: auto;
+        border: 1px solid white;
+        border-radius: 8px;
+        padding: 8px;
+        width: 100%;
+        background-color: #33004B;
+        color: white;
+    }
+
+    input[type="range"]{
+         accent-color: #ff0068;
+         min-width: fit-content;
+    }
+
+    button{
+        display: block;
+        margin: auto;
+        width: 100%;
+        background-color: #ff0068;
+        font-family: "Jersey 20", sans-serif;
+        border: none;
+        border-radius: 5px;
+        max-width: 150px;
+    } 
+
+    footer{
+        margin-bottom: 12px;
+    }
+
+
+}
+
+/*celulares*/
+
+@media screen and (max-width: 640px){
+
+     form{
+        padding: 12px;
+    }
+
+   h3, h2, textarea{
+        margin-bottom: 8px;
+    }
+
+       button{
+        padding: 5px;
+        font-size: 16px;
+    }
+}
+
+
+/*tables*/
+
+@media screen and (min-width: 641px)
+{
+
+     form{
+        padding: 16px;
+        margin-bottom: 25px;
+    }
+
+    h3, h2, textarea{
+        margin-bottom: 10px;
+    }
+
+    button{
+        padding: 5px;
+        font-size: 18px;
+    }
+}

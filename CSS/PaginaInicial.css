@@ -1,3 +1,161 @@
- footer > p{
-    text-align: center;
- }
+@import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Silkscreen:wght@400;700&display=swap');
+
+@media screen {
+
+   html{
+      overflow-x: hidden;
+   }
+         body{
+         min-height: 100vh;
+         display: flex;
+         flex-direction: column;
+         background-image: url('../Gif/Background');
+         background-position: center;
+         background-repeat: repeat;
+         background-color: #0c001c;
+         padding-bottom: 14px;
+         }
+
+      main{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+      }
+
+      h1{
+         text-align: center;
+         color:white;
+         font-family: "Silkscreen", sans-serif;
+         text-shadow: 3px 4px 1px #ff0068;
+         margin-bottom: 16px;
+      }
+
+      img{
+         display: block;
+         margin: auto;
+      }
+      
+      p{
+         text-align: justify;
+         color: white;
+         font-family: "Jersey 20";
+      }
+
+      section > p{
+         display: flex;
+         flex-wrap: wrap;
+      }
+
+      section{
+         margin: 10px;
+         max-width: 650px;
+      }
+
+        footer{
+         text-align: center;
+         margin-top: auto;
+      }
+
+}
+
+/*celular*/
+
+@media screen and (max-width:640px){
+      body{
+         overflow-y: scroll;
+      }
+
+      h1{
+         font-size: 14px;
+         margin-top: 10px;
+      }
+
+      section > p
+      {
+      font-size: 14px;
+      margin-bottom: 10px;
+      }
+         main{
+         margin: 0 14px;
+      }
+
+      img{
+         width: 200px;
+         height: 200px;
+      }
+
+     
+
+}
+
+
+/*tablet*/
+
+@media screen and (min-width: 641px)and (max-width: 1399px){ 
+
+   body{
+      overflow: hidden;
+   }
+   
+   h1{
+         font-size: 20px;
+         margin-top: 10px;
+      }
+
+      section > p
+      {
+      font-size: 18px;
+      margin-bottom: 10px;
+      }
+
+      main{
+         margin: 0 24px;
+         height: auto;
+      }
+
+    img{
+         width: 250px;
+         height: 250px;
+      }
+
+}
+
+ /*telas grandes*/
+
+@media screen and (min-width: 1400px){
+
+   body{
+      display: grid;
+    
+   }
+          main{
+            margin: 16px;
+            flex-direction: row;
+            justify-self: unset;
+         }
+
+         section{
+            margin: 10px;
+            width: 445px;
+         }
+
+           section > p{
+         margin: 10px;
+         font-size: 20px;
+      }
+
+      /*menu - display grid desceu o menu*/
+      
+   ul, li{
+      margin-top: 0;
+   }
+
+   ul{
+      padding-top: 8px;
+   }
+
+
+} 
+
+

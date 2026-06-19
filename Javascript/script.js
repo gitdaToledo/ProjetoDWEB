@@ -1,6 +1,6 @@
 //Menu 
 
-const abrirMenu = document.querySelector("#abrirMenu, #btnMenu"); //#abrirMenu - index | #btnMenu - outras páginas 
+const abrirMenu = document.querySelector("#abrirMenu"); //#abrirMenu - index | #btnMenu - outras páginas 
 const menu = document.querySelector("#menu");
 const overlay = document.querySelector("#overlay");
 
