@@ -22,7 +22,7 @@ body{
 
 .grupo-loja {
     background-color: #0c001c;
-    border: 2px solid red;
+    border: 2px solid #ff0068;
     box-shadow: 0 0 8px 8px #ff00663d; 
     border-radius: 20px;
     display: grid;
@@ -35,7 +35,6 @@ body{
 
 nav.paginacao-container{
     margin-bottom: 0;
-    max-height: 100px;
 }
 
 @media (min-width: 768px) {
@@ -47,7 +46,7 @@ nav.paginacao-container{
     }
 }
 .Caixa {
-    border: 1px solid red;
+    border: 1px solid #ff0068;
     background-color: #0c001c;
     box-shadow: 0 0 20px 8px #00000095; 
     border-radius: 20px;
@@ -72,7 +71,7 @@ h3{
 h4 {
     text-align: center;
     align-self: center;
-    background-color: red;
+    background-color: #ff0068;
     border-radius: 5px;
     width: 80px;
     color: #0c001c;
@@ -99,13 +98,31 @@ h4 {
     margin-bottom: 4px;  
 }
 
-.paginacao-container {
+nav.paginacao-container > ul.paginacao {
     display: flex;
     justify-content: center;
-    margin-top: 40px;    
-    margin-bottom: 20px;
+    align-items: center;
+    width: auto;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
 }
-.paginacao {
+
+nav.paginacao-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+}
+
+nav.paginacao-container > ul.paginacao > li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+ul.paginacao {
     display: flex;
     list-style: none;
     padding: 0;
@@ -116,30 +133,30 @@ h4 {
     padding: 8px 16px;
     color: aliceblue;              
     background-color: #0c001c;     
-    border: 1px solid red;      
+    border: 1px solid #ff0068;      
     text-decoration: none;
-    font-family: 'Minecraft', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     transition: background-color 0.2s, color 0.2s;
 }
-.paginacao li:first-child .pag-link {
+ul.paginacao li:first-child a.pag-link {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
-.paginacao li:last-child .pag-link {
+ul.paginacao li:last-child a.pag-link {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-.pag-link:hover {
-    background-color: red;        
+a.pag-link:hover {
+    background-color: #ff0068;        
     color: #0c001c;
     font-weight: bolder;               
 }
-.pag-link.ativo {
-    background-color: red;
+a.pag-link.ativo {
+    background-color: #ff0068;
     color: #0c001c;
     font-weight: bold;
 }
-.pag-link.desativado {
+a.pag-link.desativado {
     pointer-events: none; 
     cursor: default;         
 }

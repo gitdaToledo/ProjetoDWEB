@@ -14,6 +14,7 @@
          background-repeat: repeat;
          background-color: #0c001c;
          padding-bottom: 14px;
+         box-sizing: border-box;
          }
 
       main{
@@ -147,13 +148,7 @@
 
       /*menu - display grid desceu o menu*/
       
-   ul, li{
-      margin-top: 0;
-   }
-
-   ul{
-      padding-top: 8px;
-   }
+  
 
 
 } 
