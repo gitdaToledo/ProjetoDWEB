@@ -3,40 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/menu.css">
+    <link rel="stylesheet" href="../CSS/menuIndex.css">
     <link rel="stylesheet" href="../CSS/index.css">
+   <link rel="icon" type="image/x-icon" href="/itensPng/Logo.png">
     <title>Projeto DWEB - Jogos Indie</title>
 
 </head>
 <body>
 
-   <div class="titulo">
-       <h1>JOGOS</h1>
-       <h1>INDIE</h1>
-   </div>
+   <main>
+           <div class="titulo">
+               <h1 id="titulo1">JOGOS</h1>
+               <h1 id="titulo2">INDIES</h1>
+           </div>
 
-    <div id="overlay"></div> <!--background quando o menu é selecionado-->
+           <!--background quando o menu é selecionado-->
+            <div id="overlay"></div> 
 
-   <a href="/Projeto/PaginaInicial.html" id="start">
-    <img id="botaoStart" src="../itensPng/botaoStart.png" alt="Botão de Start">
-   </a>
+           <a href="/Projeto/PaginaInicial.html" id="start">
+            <img id="botaoStart" src="../itensPng/botaoStart.png" alt="Botão de Start">
+           </a>
 
-   <div id="loading"> 
-    <h2>CARREGANDO...</h2>
+           <div id="loading">
+            <h2>CARREGANDO...</h2>
+            <div id="barra">
+                
+                <div id="progresso"></div>
+            </div>
+           </div>
+           
+            <h2 id="abrirMenu">MENU</h2>
+            <nav id="menu">
+                <a href="Sobre.html">Sobre</a>
+                <a href="Localizacao.html">Localização</a>
+                <a href="Contato.html">Contato</a>
+                <a href="Loja.html">Loja</a>
+            </nav>
+   </main>
 
-    <div id="barra">
-        <div id="progresso"></div>
-    </div>
-</div>
-
- <h2 id="abrirMenu">MENU</h2> 
-
-    <nav id="menu">
-        <a href="#">Sobre</a>
-        <a href="#">Localização</a>
-        <a href="Contato.html">Contato</a>
-       </nav>
-   
     <script src="../Javascript/script.js"></script>
 
 </body>

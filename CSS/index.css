@@ -1,35 +1,42 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Jersey+20&family=Silkscreen:wght@400;700&display=swap');
 
- /*estilos gerais e para celular*/
+ /*estilos gerais*/
 
     *{
-    box-sizing:border-box;
+        box-sizing:border-box;
     }
 
     body{
-        min-height:98vh;
-        background-color: #12022b;
-        background-image: url(../Imagens-dinamicas/backgroundIndex-celular.png);
-        background-size: 100vw 100vh;
-        background-repeat: no-repeat;
-        padding-top: clamp(100px, 30vh, 300px);
-        user-select: none;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../Gif/Background);
+        background-position: center;
+        background-repeat: repeat;
+        background-color: #0c001c;
+        margin: 0;
     }
 
-        main{
-        min-height:75vh;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
+      main{
+        width: min(90vw, 90vh, 500px);
+        aspect-ratio: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 8px solid #ff0068;    
+        padding: clamp(20px, 5vw, 60px);   
+        box-shadow: 0 0 15px 4px #ff0068;
     }
 
     h1{
         font-family: "Jersey 20", sans-serif;
         color: white;
         text-align: center;
-        font-size: clamp(6em, 10vw, 10rem);
-        text-shadow: 3px 4px 1px #ff0068;
+        text-shadow: 6px 6px 1px #ff0068;
         margin: 0;
     }
 
@@ -37,22 +44,33 @@
         line-height: 0.8;
     }
 
+    #titulo1{
+       font-size: clamp(3rem, 15cqw, 8rem);
+    }
+
+    #titulo2{
+        font-size: clamp(2rem, 14cqw, 7rem);
+    }
+
     h2#abrirMenu{
         color: white;
         font-family: "Jersey 20", sans-serif;
-        width: 30vw;
+        text-align: center;
+        width: fit-content;
         font-size: clamp(20px, 4vw, 50px);
         padding: 3px;
-        margin: 1.5vh auto 0;
+        margin: 1.5vh 0 0;
     }
 
     #start{
         display: flex;
         justify-content: center;
+        margin-top:clamp(10px,2vh,30px);
     }
 
-      #botaoStart{
-          width:clamp(150px,45vw,450px);
+     #botaoStart{
+        width:clamp(120px,20vw,250px);
+        max-width: 100%;
     }
 
    /*animação carregamento*/ 
@@ -89,48 +107,23 @@
     }
 
 
-@media screen and (max-width: 958px) and (orientation: landscape) /*celular no modo paisagem*/
+  /*telas grandes*/
+@media screen and (min-width: 900px) 
 {
-     body{
-        background-image: url(../Imagens-dinamicas/backgroundIndex.jpg);
-        padding-top: 15vh;
+    body{
         font-size: 1em;
     }
 
-    #abrirMenu{
-        margin: 0;
-        text-align: center;
+    main{
+        width: 80vw;
+        max-width: 900px;
+        padding: 60px;
+        aspect-ratio: 16 /9;
     }
-
-     #botaoStart{
-        margin-top: 3vh;
-        width: 14vw;
+    
+    h2#abrirMenu{
+       width: fit-content;
     }
-
-}
-
-@media screen and (min-width: 760px) and (max-width: 958px){/*tablets*/
-    body{
-        padding-top: 35vh;
-        background-image: url(../Imagens-dinamicas/backgroundIndex-celular.png);
-        background-size: 100vw 100vh;
-    }
-
-     #botaoStart{
-       min-width: 220px;
-       width: 14vw;
-    }
-}
-
-@media screen and (min-width: 959px)  /*telas grandes*/
-{
-    body{
-        padding-top: 20vh;
-        font-size: 1em;
-        background-image: url(../Imagens-dinamicas/backgroundIndex.jpg);
-        background-size: 100vw 100vh;
-    }
-
     #abrirMenu:hover::before,
     #abrirMenu:hover::after, a:hover::before {
         opacity: 1;
@@ -146,9 +139,7 @@
     }
 
      #botaoStart{
-        margin-top: 3vh;
         cursor: pointer;
-        max-width: 250px;
         }
 
 }
